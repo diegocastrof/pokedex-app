@@ -1,0 +1,28 @@
+:root {
+	--project-font-size: 1.6rem;
+	--project-width: 120rem;
+	--footer-height: 15rem;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+
+body {
+	display: flex;
+	font-size: var(--project-font-size);
+}
+
+#root {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+}

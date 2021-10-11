@@ -1,0 +1,11 @@
+@mixin scrollbar {
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+		background-color: var(--white);
+		transform: translateX(-2rem);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--primary-color);
+		border-radius: 2.5px;
+	}
+}

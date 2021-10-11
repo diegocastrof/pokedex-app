@@ -1,0 +1,14 @@
+.pokemon-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 2rem;
+	row-gap: 4rem;
+
+	@include mobile {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	@include mid-screens {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

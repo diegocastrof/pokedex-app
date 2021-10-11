@@ -1,0 +1,28 @@
+.content-body {
+	max-width: var(--project-width);
+	margin: 0 auto;
+	padding: 0 2rem;
+	padding-bottom: var(--footer-height);
+}
+
+// breakpoints
+
+$mobile: 600px;
+$desktop: 1200px;
+
+@mixin mobile {
+	@media screen and (max-width: $mobile) {
+		@content;
+	}
+}
+@mixin mid-screens {
+	@media screen and (min-width: $mobile) and (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: $desktop) {
+		@content;
+	}
+}

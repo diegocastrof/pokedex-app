@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { PokemonIndex } from '../screens/Pokemon';
+import LayoutRoute from './layout';
 
 const routes = (
 	<Switch>
-		<Route exact path="/" component={PokemonIndex} />
+		<LayoutRoute exact path="/" component={PokemonIndex} />
 	</Switch>
 );
 
