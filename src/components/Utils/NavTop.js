@@ -13,7 +13,7 @@ const NavTop = () => {
 						<span className="navtop--logo__title">HoumPokedex!</span>
 					</Link>
 				</div>
-				<p>Atrápalos ya!</p>
+				<p>Gotta catch 'em all!</p>
 			</div>
 		</div>
 	);

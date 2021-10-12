@@ -12,8 +12,16 @@
 	&--logo {
 		display: flex;
 		align-items: center;
+		align-self: stretch;
 		justify-content: space-between;
+		padding: 0 1rem;
+		border-bottom-left-radius: 3rem;
+		border-bottom-right-radius: 3rem;
 		min-width: 25rem;
+		transition: 0.3s;
+		&:hover {
+			background-color: var(--white);
+		}
 		a {
 			color: $primary-color;
 			display: flex;

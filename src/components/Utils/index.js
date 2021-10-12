@@ -1,4 +1,5 @@
 import Footer from './Footer';
 import NavTop from './NavTop';
+import InfiniteScroll from './InfiniteScroll';
 
-export { Footer, NavTop };
+export { Footer, InfiniteScroll, NavTop };

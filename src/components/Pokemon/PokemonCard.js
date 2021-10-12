@@ -59,7 +59,7 @@ const PokemonCardTypesSection = ({ sectionTitle, types, weight }) => {
 			<div className="pokemon-card--types__container">
 				<div className="pokemon-card--types">
 					{typesTextArray.map((typeText, index) => (
-						<TypeBadge typeText={typeText} index={index} />
+						<TypeBadge key={typeText} typeText={typeText} index={index} />
 					))}
 				</div>
 				<p className="d-flex justify-content-between">
@@ -106,7 +106,7 @@ const PokemonCardStatsSection = ({ sectionTitle, stats }) => {
 			<p className="section-title">{sectionTitle}</p>
 			<div className="pokemon-card--stats">
 				{pokemonStatsArray.map(({ baseStat, statName }) => (
-					<p className="d-flex justify-content-between">
+					<p key={statName} className="d-flex justify-content-between">
 						<span className="font-weight-bold">
 							{capitalizeFirstLetter(statName)}:
 						</span>
