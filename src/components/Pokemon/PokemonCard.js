@@ -1,7 +1,9 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
 import { Image } from 'react-bootstrap';
 import { typesUrl } from './pokemonTypeUrls';
-import { capitalizeFirstLetter } from '../../services/utils';
+import { capitalizeFirstLetter, guidGenerator } from '../../services/utils';
 
 const PokemonCard = ({ pokemonInfo }) => {
 	const {
@@ -43,9 +45,24 @@ const PokemonCard = ({ pokemonInfo }) => {
 export default PokemonCard;
 
 const TypeBadge = ({ typeText, index }) => {
+	const guid = guidGenerator();
+
 	return (
 		<div key={`${typeText}-${index}`} className="pokemon-card--types__badge">
-			<Image fluid src={typesUrl[`${typeText}`]} />
+			<Image
+				fluid
+				src={typesUrl[`${typeText}`]}
+				data-tip
+				data-for={`registerTip-${guid}`}
+			/>
+			<ReactTooltip
+				id={`registerTip-${guid}`}
+				delay={{ show: 250, hide: 0 }}
+				place="top"
+				effect="solid"
+			>
+				{capitalizeFirstLetter(typeText)}
+			</ReactTooltip>
 		</div>
 	);
 };
