@@ -1,0 +1,7 @@
+.pokemon-filters {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	align-items: center;
+	column-gap: 4rem;
+	padding: 0 1rem;
+}
